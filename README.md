@@ -7,14 +7,13 @@ A roblox script library for exploiters to make scripts
 
 ```lua Script
 loadstring(game:HttpGet("https://raw.githubusercontent.com/imaaan00bb/Aurora-LIB/refs/heads/main/code"))()
--- Use the GUI Library
-local GUI = require(game.ServerStorage:WaitForChild("GUI_Library"))  -- Adjust path as needed
+local GUI = require(game.ReplicatedStorage.GUI)
 
--- Create a new GUI
+-- Create a GUI
 local myGUI = GUI:CreateGUI("My Custom GUI")
 
 -- Add a Tab to the GUI
-local tab1 = GUI:AddTab(myGUI, "Tab 1")
+local tab1 = GUI:AddTab(myGUI, "Main Tab")
 
 -- Add a Button to Tab 1
 GUI:AddButton(tab1, "Click Me", function()
@@ -30,4 +29,5 @@ end)
 GUI:AddToggle(tab1, "Enable Feature", false, function(isOn)
     print("Feature Enabled: " .. tostring(isOn))
 end)
+
 ``` 
